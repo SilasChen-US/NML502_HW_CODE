@@ -3,7 +3,8 @@ hidden_neurons = 10; % Use 10 hidden PEs as specified
 learning_rate = 0.05; % Set learning rate to 0.05
 batch_size = 100; % Set batch size to 100
 max_learn_steps = 5000 * batch_size; % Set maximum learning steps
-input_range = [0.1, 1.0]; % Input range for the function
+input_range = [0.1, 1.0]; % Input rang
+% e for the function
 output_scale = 1.0; % Maximum value for scaling the output
 
 % Generate training data
