@@ -8,7 +8,7 @@ output_scale = 1.0;
 
 train_inputs = input_range(1) + (input_range(2)-input_range(1)) .* rand(200, 1);
 train_targets = 1 ./ train_inputs;
-train_targets = train_targets / output_scale; 
+train_targets = train_ta rgets / output_scale; 
 
 test_inputs = input_range(1) + (input_range(2)-input_range(1)) .* rand(100, 1);
 test_targets = 1 ./ test_inputs;

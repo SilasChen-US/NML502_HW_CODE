@@ -122,3 +122,24 @@ ylabel("Actual outputs");
 legend("Training", "Test");
 title("Prediction Performance");
 grid on;
+
+
+% Generate a new figure
+figure;
+% Calculate the desired outputs using the function y = 1/x
+train_desired_outputs = 1 ./ train_targets;
+test_desired_outputs = 1 ./ test_targets;
+% Scatter plot for training data
+scatter(train_targets, train_desired_outputs, 'b');
+hold on;
+% Scatter plot for test data
+scatter(test_targets, test_desired_outputs, 'r');
+% Label the axes
+xlabel('x (the value of x from 0-1)');
+ylabel('1/x');
+% Add a legend
+legend('Training Data', 'Test Data');
+% Add a title
+title('Input vs. Output Performance');
+% Add grid
+grid on;
