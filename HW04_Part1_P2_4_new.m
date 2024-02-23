@@ -123,7 +123,6 @@ legend("Training", "Test");
 title("Prediction Performance");
 grid on;
 
-
 % Generate a new figure
 figure;
 % Calculate the desired outputs using the function y = 1/x
@@ -134,11 +133,17 @@ scatter(train_targets, train_desired_outputs, 'b');
 hold on;
 % Scatter plot for test data
 scatter(test_targets, test_desired_outputs, 'r');
+
+% Create a line plot for y = 1/x across the range of x from a small positive number to 1
+x_line = linspace(eps, 1, 100); % Generates 1000 points between a small positive number and 1
+y_line = 1 ./ x_line; % Calculates y = 1/x for the generated points
+plot(x_line, y_line, 'k-', 'LineWidth', 1); % 'k-' creates a black line
+
 % Label the axes
 xlabel('x (the value of x from 0-1)');
 ylabel('1/x');
 % Add a legend
-legend('Training Data', 'Test Data');
+legend('Training Data', 'Test Data', 'y = 1/x');
 % Add a title
 title('Input vs. Output Performance');
 % Add grid
